@@ -8,10 +8,6 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.tin612.exercise1.Step2">
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -31,13 +27,14 @@
                 android:id="@+id/salarySeekBar"
                 android:layout_centerHorizontal="true"
                 android:layout_alignParentTop="true"
-                android:max="100000"
+                android:max="100001"
                 />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="$0"
                 android:layout_marginTop="10dp"
+
                 android:layout_alignParentLeft="true"
                 android:layout_below="@id/salarySeekBar"
                 />
@@ -71,16 +68,19 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="@string/sport_1"
+                    android:id="@+id/checkbox1"
                     />
                 <CheckBox
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="@string/sport_2"
+                    android:id="@+id/checkbox2"
                     />
                 <CheckBox
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="@string/sport_3"
+                    android:id="@+id/checkbox3"
                     />
             </TableRow>
             <TableRow
@@ -90,16 +90,19 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="@string/sport_4"
+                    android:id="@+id/checkbox4"
                     />
                 <CheckBox
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="@string/sport_5"
+                    android:id="@+id/checkbox5"
                     />
                 <CheckBox
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="@string/sport_6"
+                    android:id="@+id/checkbox6"
                     />
             </TableRow>
         </TableLayout>
@@ -114,5 +117,4 @@
             android:layout_below="@id/checkBoxLayout"
             android:layout_centerHorizontal="true"
             />
-    </RelativeLayout>
 </RelativeLayout>
