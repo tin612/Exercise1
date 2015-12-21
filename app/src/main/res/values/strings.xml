@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Exercise1</string>
+    <string name="step_1">Step 1</string>
+    <string name="step_2">Step 2</string>
+    <string name="f_name">First Name</string>
+    <string name="l_name">Last Name</string>
+    <string name="email">Email</string>
+    <string name="p_no">Phone Number</string>
+    <string name="m">Male</string>
+    <string name="f_m">Female</string>
+    <string name="next">Next</string>
+    <string name="y_salary">Your salary:</string>
+    <string name="w_sport">Which sport do you like?</string>
+    <string name="sport_1">Football</string>
+    <string name="sport_2">Tennis</string>
+    <string name="sport_3">Ping pong</string>
+    <string name="sport_4">Swimming</string>
+    <string name="sport_5">Volleyball</string>
+    <string name="sport_6">Basketball</string>
+    <string name="done">Done</string>
+</resources>
