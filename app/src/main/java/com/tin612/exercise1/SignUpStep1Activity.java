@@ -90,6 +90,11 @@ public class SignUpStep1Activity extends AppCompatActivity {
             public void onClick(View v) {
                 if (checkEmptyEditText() == 0) {
                     Intent step2 = new Intent(SignUpStep1Activity.this, SignUpStep2Activity.class);
+                    step2.putExtra(Constant.fname, fname.getText().toString());
+                    step2.putExtra(Constant.lname, lname.getText().toString());
+                    step2.putExtra(Constant.email,email.getText().toString());
+                    step2.putExtra(Constant.pnum, pnum.getText().toString());
+
                     startActivity(step2);
                 }
             }
