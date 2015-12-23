@@ -9,7 +9,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name=".SignUpStep1Activity"
             android:label="@string/step_1">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,13 +17,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Step2"
-            android:label="@string/step_2"
-            >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.tin612.exercise1.MainActivity" />
+        <activity
+            android:name=".SignUpStep2Activity"
+            android:label="@string/step_2">
         </activity>
+        <activity android:name=".SignUpStep3Activity"
+            ></activity>
     </application>
 
 </manifest>

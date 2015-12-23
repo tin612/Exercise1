@@ -1,9 +1,10 @@
 package com.tin612.exercise1;
 
+import android.app.ActionBar;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -12,7 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.os.Process;
 
-public class Step2 extends AppCompatActivity {
+public class SignUpStep2Activity extends AppCompatActivity {
     Button doneBtn ;
     SeekBar seekBar;
     TextView salary;
@@ -36,7 +37,7 @@ public class Step2 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_step2);
+        setContentView(R.layout.activity_sign_up_step2);
         init();
         doneBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,7 +46,7 @@ public class Step2 extends AppCompatActivity {
                         || check5.isChecked() || check6.isChecked()
                         )
                 {
-                    Intent intent = new Intent(Step2.this, MainActivity.class);
+                    Intent intent = new Intent(SignUpStep2Activity.this, SignUpStep1Activity.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     intent.putExtra("Exit", true);
                     startActivity(intent);
@@ -84,9 +85,18 @@ public class Step2 extends AppCompatActivity {
     }
 
     @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        ActionBar actionBar = getActionBar();
+        if (actionBar != null) {
+            actionBar.setHomeButtonEnabled(false); // disable the button
+            actionBar.setDisplayHomeAsUpEnabled(false); // remove the left caret
+            actionBar.setDisplayShowHomeEnabled(false); // remove the icon
+        }
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
     protected void onDestroy() {
-        Process.killProcess(android.os.Process.myPid());
         super.onDestroy();
-        getParent().finish();
     }
 }
